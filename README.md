@@ -1,4 +1,4 @@
-package homework;
+```homework
 
 public class Homework1{
   public static void main(String []args){
@@ -11,3 +11,4 @@ public class Homework1{
     }
   }
 }
+```
