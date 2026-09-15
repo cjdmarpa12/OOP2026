@@ -1,4 +1,4 @@
-###homework1
+### homework1
 ```homework1
 
 public class Homework1{
@@ -15,7 +15,7 @@ public class Homework1{
 ```
 ![Alt homework11](./image/homework1.png)
 
-###homework2
+### homework2
 ```homework2
 
 public class homework2 {
