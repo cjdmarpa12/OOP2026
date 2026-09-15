@@ -19,11 +19,11 @@ public class Homework1{
 
 public class homework2 {
     public static void main(String[] args) {
-        int n = 20; // 피보나치 재귀 횟수
+        int n = 20; // 피보나치 횟수
 
         System.out.println(n);
         fibonacci(n);
-        //재귀 횟수 출력
+        //피보나치 횟수 출력
     }
 
     public static void fibonacci(int n) {
