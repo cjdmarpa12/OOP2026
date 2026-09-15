@@ -1,4 +1,4 @@
-### homework1
+<img width="622" height="444" alt="image" src="https://github.com/user-attachments/assets/9fbba561-cfa2-4b0e-a8d6-b641eb9e63ac" />### homework1
 ```homework1
 
 public class Homework1{
@@ -47,3 +47,39 @@ public class homework2 {
 }
 ```
 ![Alt homework11](./image/homework2.png)
+
+### homework3
+```homework3
+package oop;
+
+public class homework3 {
+    public static void main(String[] args) {
+        int n = 20;
+
+        System.out.println(n);
+        fibonacci(n);
+    }
+
+    public static void fibonacci(double n) {
+        if (n <= 0) return;
+
+        double first = 1;
+        double second = 2;
+        double third = 1;
+        double fourth = 1;
+
+        for (double i = 1; i <= n; i++) {
+            System.out.println(second / fourth);
+
+            double next = first + second;
+            first = second;
+            second = next;
+            
+            double under = third + fourth;
+            third = fourth;
+            fourth = under;
+        }
+    }
+}
+```
+![Alt homework11](./image/homework3.png)
