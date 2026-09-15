@@ -1,4 +1,4 @@
-<img width="622" height="444" alt="image" src="https://github.com/user-attachments/assets/9fbba561-cfa2-4b0e-a8d6-b641eb9e63ac" />### homework1
+### homework1
 ```homework1
 
 public class Homework1{
