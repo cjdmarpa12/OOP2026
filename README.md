@@ -107,3 +107,23 @@ public class homework4 {
 
 ```
 ![Alt homework11](./image/homework4.png)
+### homework5
+```
+package oop;
+
+public class homework5 {
+    public static void main(String[] args) {
+        double sum = 0.0;
+        double root_twelve = Math.sqrt(12);
+        
+        for (int k = 0; k < 25; k++) {
+            sum += Math.pow(-1.0 / 3.0, k) / (2 * k + 1);
+            
+            double Pi = root_twelve * sum;
+
+            System.out.printf("%.15f\n", Pi);
+        }
+    }
+}
+```
+![Alt homework11](./image/homework5.png)
