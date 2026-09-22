@@ -127,3 +127,37 @@ public class homework5 {
 }
 ```
 ![Alt homework11](./image/homework5.png)
+### homework6
+```
+package oop;
+
+public class homework6 {
+	public static void main(String[] args) {
+        
+        int rows = 7;
+        
+        int[][] binomial = new int[rows][rows];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <= i; j++) {
+            	
+                if (j == 0 || j == i) {
+                    binomial[i][j] = 1;
+                } else {
+                    binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
+                }
+            }
+        }
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(binomial[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+```
+
+![Alt homework11](./image/homework6.png)
