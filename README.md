@@ -161,7 +161,7 @@ public class homework6 {
 ```
 ![Alt homework11](./image/homework6.png)
 
-###homework7
+### homework7
 ```
 public class homework7 {
     public static void main(String[] args) {
