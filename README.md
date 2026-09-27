@@ -159,5 +159,46 @@ public class homework6 {
 }
 
 ```
-
 ![Alt homework11](./image/homework6.png)
+
+###homework7
+```
+public class homework7 {
+    public static void main(String[] args) {
+        //0~99개 난수 20개 만들기
+        int data[] = new int[20];
+        for(int i=0; i<20; i++) {
+            data[i]=(int)(Math.random()*100);
+        }
+        //정렬전 데이터 출력
+        for(int i=0; i<20; i++) {
+            System.out.print(data[i] + " ");
+        }
+        System.out.println();
+
+        for(int i = 0; i < data.length - 1; i++){
+            int minindex = i; //현재 채워야 할 자리를 가장 작은 값의 위치로 가정
+
+            //이후의 값들을 훑으며 최솟값의 위치를 탐색
+            for(int j = i + 1; j < data.length; j++) {
+                if(data[j] < data[minindex]) {
+                    minindex = j; //더 작은값을 찾으면 그 위치를 기록
+                }
+            }
+
+            //최솟값을 찾았으니 i와 minindex자리를 교환
+            if (i != minindex) {
+                int temp = data[i];
+                data[i] = data[minindex];
+                data[minindex] = temp; 
+            }
+        }
+        //정렬한 결과 값 출력
+        for(int i = 0; i < 20; i++) {
+            System.out.print(data[i] + " ");
+        }
+    }
+}
+
+```
+![Alt homework11](./image/homework7.png)
