@@ -1,3 +1,5 @@
+<details>
+<summary><b>hw1~5</b></summary>
 ### homework1
 ```homework1
 
@@ -127,6 +129,7 @@ public class homework5 {
 }
 ```
 ![Alt homework11](./image/homework5.png)
+</details>
 ### homework6
 ```
 package oop;
