@@ -202,3 +202,35 @@ public class homework7 {
 
 ```
 ![Alt homework11](./image/homework7.png)
+
+### homework8
+```
+package hw;
+public class homework8 {
+
+    public static void main(String[] args) {
+        
+        int student = 30;
+        int[][] testsum = new int[student][4];
+
+        System.out.println(" 번호 |  국어  영어  수학  과학 || 합계");
+        System.out.println("---------------------------------------");
+
+
+        for (int i = 0; i < student; i++) {
+            int sum = 0;
+            System.out.printf("%3d번째 학생 : ", (i + 1));
+
+            for (int j = 0; j < 4; j++) {
+
+                testsum[i][j] = (int)(Math.random() * 101);
+                System.out.printf("%3d   ", testsum[i][j]);
+                sum = sum + testsum[i][j];
+            }
+
+            System.out.printf("|| 합계: %3d점\n", sum);
+        }
+    }
+}
+```
+![Alt homework11](./image/homework8.png)
