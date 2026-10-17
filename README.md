@@ -135,6 +135,9 @@ public class homework5 {
 
 </details>
 
+<details>
+<summary><b>hw6~8</b></summary>
+	
 ### homework6
 ```
 package oop;
@@ -242,6 +245,11 @@ public class homework8 {
 }
 ```
 
+</details>
+
+<details>
+<summary><b>hw10~14</b></summary>
+	
 ### homework10
 ```
 package hw;
@@ -378,3 +386,5 @@ public class homework11 {
 
 ```
 ![Alt homework11](./image/homework11.png)
+
+</details>
