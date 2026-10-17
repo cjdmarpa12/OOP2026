@@ -1,5 +1,3 @@
-<details>
-<summary><b>hw1~5</b></summary>
 ### homework1
 ```homework1
 
@@ -129,7 +127,7 @@ public class homework5 {
 }
 ```
 ![Alt homework11](./image/homework5.png)
-</details>
+
 ### homework6
 ```
 package oop;
@@ -299,3 +297,77 @@ public class homework10 {
 ```
 ![Alt homework11](./image/homework10.png)
 
+### homework11
+```
+package hw;
+
+import java.util.Arrays;
+public class homework11 {
+    public static void main(String[] args) {
+        int array_count;
+        
+        if (args.length == 1) {
+            array_count = Integer.parseInt(args[0]);
+        } else {
+            array_count = 100; 
+        }
+
+        int[] arr = new int[array_count];
+
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * 100) + 1;
+        }
+
+        System.out.print("데이터 : ");
+        for (int i = 0; i < array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n");
+
+        double sum = 0.0;
+        double prod = 1.0;
+        double logSum = 0.0;
+        double reciprocalSum = 0.0;
+
+        for (int i = 0; i < array_count; i++) {
+            sum += arr[i];
+            prod *= arr[i];
+            logSum += Math.log(arr[i]);
+            reciprocalSum += (1.0 / arr[i]);
+        }
+
+        double arithmeticMean = sum / array_count;
+        
+        double geometricMean = Math.pow(prod, 1.0 / array_count);
+        if (Double.isInfinite(geometricMean)) {
+            geometricMean = Math.exp(logSum / array_count);
+        }
+        
+        double harmonicMean = array_count / reciprocalSum;
+
+        Arrays.sort(arr);
+
+        System.out.print("정렬된 데이터 : ");
+        for (int i = 0; i < array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println("\n");
+
+        double median;
+        if (array_count % 2 == 1) {
+            median = arr[array_count / 2];
+        } else {
+            median = (arr[(array_count / 2) - 1] + arr[array_count / 2]) / 2.0;
+        }
+
+
+        System.out.printf("arithmetic mean (산술평균) = %f\n", arithmeticMean);
+        System.out.printf("geometric mean  (기하평균) = %f\n", geometricMean);
+        System.out.printf("harmonic mean   (조화평균) = %f\n", harmonicMean);
+        System.out.printf("median          (중앙값)   = %f\n", median);
+    }
+}
+
+
+```
+![Alt homework11](./image/homework11.png)
