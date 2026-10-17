@@ -387,4 +387,92 @@ public class homework11 {
 ```
 ![Alt homework11](./image/homework11.png)
 
+###homework13
+```
+package hw;
+
+import java.util.Scanner;
+
+public class homework13 {
+    public static void main(String[] args) {
+        double out = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        System.out.println(inputString);
+
+        String[] arrOfStr = inputString.split(" ");
+        for (String a : arrOfStr) {
+            System.out.println(a);
+        }
+
+
+        if (arrOfStr.length == 3) {
+            if (arrOfStr[1].equals("+")) {
+                out = Double.parseDouble(arrOfStr[0]) + Double.parseDouble(arrOfStr[2]);
+            } else if (arrOfStr[1].equals("-")) {
+                out = Double.parseDouble(arrOfStr[0]) - Double.parseDouble(arrOfStr[2]);
+            } else if (arrOfStr[1].equals("#")) {
+                out = Double.parseDouble(arrOfStr[0]) * Double.parseDouble(arrOfStr[2]);
+            } else if (arrOfStr[1].equals("/")) {
+                out = Double.parseDouble(arrOfStr[0]) / Double.parseDouble(arrOfStr[2]);
+            }
+            System.out.printf("%.4f\n", out);
+        }
+
+
+        else if (arrOfStr.length == 5) {
+            double num1 = Double.parseDouble(arrOfStr[0]);
+            String op1 = arrOfStr[1];
+            double num2 = Double.parseDouble(arrOfStr[2]);
+            String op2 = arrOfStr[3];
+            double num3 = Double.parseDouble(arrOfStr[4]);
+
+            double temp = 0;
+
+
+            if ((op1.equals("+") || op1.equals("-")) && (op2.equals("#") || op2.equals("/"))) {
+                if (op2.equals("#")) {
+                    temp = num2 * num3;
+                } else if (op2.equals("/")) {
+                    temp = num2 / num3;
+                }
+
+                if (op1.equals("+")) {
+                    out = num1 + temp;
+                } else if (op1.equals("-")) {
+                    out = num1 - temp;
+                }
+            } 
+
+            else {
+                if (op1.equals("+")) {
+                    temp = num1 + num2;
+                } else if (op1.equals("-")) {
+                    temp = num1 - num2;
+                } else if (op1.equals("#")) {
+                    temp = num1 * num2;
+                } else if (op1.equals("/")) {
+                    temp = num1 / num2;
+                }
+
+                if (op2.equals("+")) {
+                    out = temp + num3;
+                } else if (op2.equals("-")) {
+                    out = temp - num3;
+                } else if (op2.equals("#")) {
+                    out = temp * num3;
+                } else if (op2.equals("/")) {
+                    out = temp / num3;
+                }
+            }
+            System.out.printf("%.4f\n", out);
+        }
+
+        scanner.close();
+    }
+}
+```
+![Alt homework11](./image/homework13.png)
+
 </details>
