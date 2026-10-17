@@ -233,4 +233,66 @@ public class homework8 {
     }
 }
 ```
+
+### homework10
+```
+package hw;
+
+public class homework10 {
+    public static void main(String[] args) {
+        int array_count, max_value, bin_size, display_scale, hist_size;
+
+        
+        if (args.length == 4) {
+            array_count = Integer.parseInt(args[0]);
+            max_value = Integer.parseInt(args[1]);
+            bin_size = Integer.parseInt(args[2]);
+            display_scale = Integer.parseInt(args[3]);
+        } else {
+
+            array_count = 50;
+            max_value = 100;
+            bin_size = 10;
+            display_scale = 1;
+        }
+        
+        hist_size = max_value / bin_size;
+        
+        int[] arr = new int[array_count];
+        int[] hist = new int[hist_size];
+        
+
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * max_value);
+        }
+        for (int i = 0; i < array_count; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        
+
+        for (int i = 0; i < array_count; i++) {
+            hist[arr[i] / bin_size]++;
+        }
+        for (int i = 0; i < hist_size; i++) {
+            System.out.print(hist[i] + " ");
+        }
+        System.out.println("\n");
+
+        System.out.println("=== 히스토그램 (별 1개당 " + display_scale + "개) ===");
+        for (int i = 0; i < hist_size; i++) {
+            int start = i * bin_size;
+            int end = (i + 1) * bin_size - 1;
+            System.out.printf("%3d ~ %3d (%2d개) : ", start, end, hist[i]);
+
+            int star_count = hist[i] / display_scale;
+            for (int j = 0; j < star_count; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+![Alt homework11](./image/homework10.png)
 ![Alt homework11](./image/homework8.png)
