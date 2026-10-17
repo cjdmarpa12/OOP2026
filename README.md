@@ -474,5 +474,94 @@ public class homework13 {
 }
 ```
 ![Alt homework11](./image/homework13.png)
+### homework14
+```
+package hw;
+
+class homework14 {
+    int num[];
+
+    homework14(int num[]) {
+        this.num = num;
+    }
+
+    double getTotal() {
+        double sum = 0;
+        for (int i = 0; i < num.length; i++) sum += num[i];
+        return sum;
+    }
+
+    double getArithmaticMean() {
+        return getTotal() / num.length;
+    }
+
+    double getHarmonicMean() {
+        double sum = 0;
+        for (int i = 0; i < num.length; i++) sum += 1.0 / num[i];
+        return num.length / sum;
+    }
+
+    double getGeometricMean() {
+        double sum = 0;
+        for (int i = 0; i < num.length; i++) sum += Math.log(num[i]);
+        return Math.exp(sum / num.length);
+    }
+
+    void sorting() {
+        for (int i = 0; i < num.length - 1; i++) {
+            for (int j = i + 1; j < num.length; j++) {
+                if (num[i] > num[j]) {
+                    int temp = num[i];
+                    num[i] = num[j];
+                    num[j] = temp;
+                }
+            }
+        }
+    }
+
+    int getMedian() {
+        sorting();
+        return num[num.length / 2];
+    }
+
+    void drawHistogram(int start, int end, int binCount, int scale) {
+        int[] hist = new int[(end - start) / binCount];
+        for (int i = 0; i < num.length; i++) {
+            hist[(num[i] - start) / binCount]++;
+        }
+
+        for (int i = 0; i < hist.length; i++) {
+            System.out.printf("%2d~%2d\t", i * binCount, (i + 1) * binCount - 1);
+            for (int j = 0; j < hist[i] / scale; j++) System.out.print("#");
+            System.out.println();
+        }
+    }
+
+    void display() {
+        System.out.printf("%3d :", num.length);
+        for (int i = 0; i < num.length; i++) System.out.printf("%3d ", num[i]);
+        System.out.println();
+    }
+}
+
+public class homework14_test {
+    public static void main(String[] args) {
+        int size = 100;
+        int data[] = new int[size];
+        for (int i = 0; i < size; i++) {
+            data[i] = (int) (Math.random() * 99) + 1;
+        }
+
+        homework14 obj = new homework14(data);
+        obj.display();
+        System.out.printf("Arithmetic Mean : %5.2f\n", obj.getArithmaticMean());
+        System.out.printf("Geometric Mean  : %5.2f\n", obj.getGeometricMean());
+        System.out.printf("Harmonic Mean   : %5.2f\n", obj.getHarmonicMean());
+        System.out.printf("Median          : %5d\n", obj.getMedian());
+        obj.drawHistogram(0, 100, 10, 1);
+    }
+}
+```
+![Alt homework11](./image/homework14.png)
 
 </details>
