@@ -1,3 +1,6 @@
+<details>
+<summary><b>hw1~5</b></summary>
+	
 ### homework1
 ```homework1
 
@@ -14,6 +17,8 @@ public class Homework1{
 }
 ```
 ![Alt homework11](./image/homework1.png)
+
+
 
 ### homework2
 ```homework2
@@ -127,6 +132,8 @@ public class homework5 {
 }
 ```
 ![Alt homework11](./image/homework5.png)
+
+</details>
 
 ### homework6
 ```
